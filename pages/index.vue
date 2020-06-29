@@ -22,7 +22,7 @@
 </template>
 
 <script>
-// import gsap from 'gsap'
+import gsap from 'gsap'
 import movieContainer from '@/components/movieContainer'
 
 export default {
@@ -34,14 +34,14 @@ export default {
 			movie_search: ''
 		}
 	},
-	// mounted() {
-	//   gsap.from('.main', {
-	//     duration: 0.8,
-	//     opacity: 0,
-	//     y: 100,
-	//     ease: 'power1'
-	//   })
-	// },
+	mounted() {
+		gsap.from('.main', {
+			duration: 0.8,
+			opacity: 0,
+			y: 100,
+			ease: 'expo'
+		})
+	},
 	methods: {
 		searchMovie() {
 			this.$store.dispatch('movies/searchMovies', this.movie_search)

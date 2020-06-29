@@ -1,10 +1,10 @@
 <template>
-  <p>SERIE</p>
+	<p>SERIE</p>
 </template>
 
 <script>
 export default {
-  transition: 'slide-fade'
+	transition: 'slide-fade'
 }
 </script>
 

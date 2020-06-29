@@ -1,10 +1,10 @@
 <template>
-  <p>SORTIE</p>
+	<p>SORTIE</p>
 </template>
 
 <script>
 export default {
-  transition: 'slide-fade'
+	transition: 'slide-fade'
 }
 </script>
 

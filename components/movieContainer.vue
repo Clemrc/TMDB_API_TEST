@@ -3,7 +3,7 @@
 		<movieCard
 			v-for="movie in movies"
 			:key="movie.id"
-			class="clement"
+			class="movie"
 			:movie="movie"
 		></movieCard>
 	</div>
@@ -23,7 +23,7 @@ export default {
 		}
 	},
 	updated() {
-		gsap.from('.clement', {
+		gsap.from('.movie', {
 			duration: 1,
 			delay: 0.2,
 			opacity: 0,

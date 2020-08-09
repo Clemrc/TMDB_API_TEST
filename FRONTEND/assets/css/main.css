@@ -1,0 +1,36 @@
+html {
+  background-color: #f8f8f8;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Slide-fade transition */
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/* 
+.nohero-enter-active,
+.nohero-leave-active {
+  transition: transform .5s ease-in-out;
+}
+
+.nohero-enter,
+.nohero-leave-to {
+  transform: translateY(-100px);
+} */

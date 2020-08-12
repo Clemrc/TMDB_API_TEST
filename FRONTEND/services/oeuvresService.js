@@ -1,4 +1,4 @@
-import { apiClient } from './api/strapi-quentin-portfolio-instance'
+import { apiClient } from './api/strapi-instance'
 
 export default {
   getOeuvres() {

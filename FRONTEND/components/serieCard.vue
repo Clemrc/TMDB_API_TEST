@@ -2,8 +2,10 @@
   <nuxt-link :to="'/tv_show/' + serie.id">
     <div class="moviecard">
       <img :src="`https://image.tmdb.org/t/p/original` + serie.poster_path" />
-      <p>{{ serie.original_name }}</p>
-      <p>{{ serie.overview }}</p>
+      <div class="description">
+        <p>{{ serie.original_name }}</p>
+        <p>{{ serie.overview }}</p>
+      </div>
     </div>
   </nuxt-link>
 </template>
@@ -31,6 +33,13 @@ export default {
   align-items: flex-start;
   transition: 0.2s;
   border-radius: 5px;
+}
+
+.description {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 img {

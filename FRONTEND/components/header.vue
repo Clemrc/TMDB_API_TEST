@@ -90,4 +90,28 @@ form {
   width: 100%;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 1023px) {
+  .container {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-menu {
+    display: block;
+  }
+
+  .navbar-start,
+  .navbar-end {
+    display: none;
+  }
+
+  .field {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+}
 </style>

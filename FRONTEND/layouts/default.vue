@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .hero {
-  padding-top: 5.25rem;
+  padding-top: 3.3rem;
 }
 
 .nuxt {
@@ -29,5 +29,11 @@ export default {
   margin: 0 auto;
   min-height: calc(100vh - 5.25rem);
   padding-top: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 5.25rem;
+  }
 }
 </style>

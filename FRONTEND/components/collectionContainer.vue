@@ -8,10 +8,11 @@ export default {}
 
 <style scoped>
 .collection-container {
-	height: 100vh;
 	width: 50%;
 	box-sizing: border-box;
 	margin: 10px;
 	border: 1px solid black;
+	border-radius: 5px;
+	margin-right: 30px;
 }
 </style>

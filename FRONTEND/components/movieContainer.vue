@@ -30,5 +30,6 @@ export default {
 	flex-direction: column;
 	flex-grow: 2;
 	width: 50%;
+	margin: 0px 20px;
 }
 </style>

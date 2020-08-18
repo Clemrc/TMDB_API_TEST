@@ -21,7 +21,6 @@ export default {
 <style scoped>
 .moviecard {
 	min-height: 10px;
-	min-width: 400px;
 	max-width: 600px;
 	overflow: hidden;
 	margin: 0 10px;
@@ -30,7 +29,7 @@ export default {
 	margin: 10px 0px;
 	display: flex;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	transition: 0.2s;
 	border-radius: 5px;
 }
@@ -51,8 +50,6 @@ export default {
 .movie-description {
 	font-size: 1rem;
 	height: 100px;
-	min-width: 400px;
-	max-width: 600px;
 	overflow: hidden;
 }
 

@@ -39,9 +39,26 @@
 					</div>
 				</div>
 
-				<div class="navbar-end">
-					<nuxt-link to="/profil" class="navbar-item">
-						<p>Profil</p>
+				<div v-if="isAuthenticated" class="navbar-end">
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">
+							{{ loggedInUser.username }}
+						</a>
+
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/profile">My Profile</a>
+							<hr class="navbar-divider" />
+							<a class="navbar-item" @click="logout">Logout</a>
+						</div>
+					</div>
+				</div>
+
+				<div v-if="!isAuthenticated" class="navbar-end buttons">
+					<nuxt-link to="/register" class="button is-primary">
+						<p>Register</p>
+					</nuxt-link>
+					<nuxt-link to="/login" class="button is-light">
+						<p>Login</p>
 					</nuxt-link>
 				</div>
 			</div>
@@ -50,16 +67,45 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
 	data() {
 		return {
 			movie_search: ''
 		}
 	},
+	computed: {
+		...mapGetters(['isAuthenticated', 'loggedInUser'])
+	},
+	mounted() {
+		// Get all "navbar-burger" elements
+		const $navbarBurgers = Array.prototype.slice.call(
+			document.querySelectorAll('.navbar-burger'),
+			0
+		)
+		// Check if there are any navbar burgers
+		if ($navbarBurgers.length > 0) {
+			// Add a click event on each of them
+			$navbarBurgers.forEach((el) => {
+				el.addEventListener('click', () => {
+					// Get the target from the "data-target" attribute
+					const target = el.dataset.target
+					const $target = document.getElementById(target)
+					// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+					el.classList.toggle('is-active')
+					$target.classList.toggle('is-active')
+				})
+			})
+		}
+	},
 	methods: {
 		searchMovie() {
 			this.$store.dispatch('movies/searchMovies', this.movie_search)
-			this.$router.push({ path: '/' })
+			this.$router.push({ path: '/film' })
+		},
+		async logout() {
+			await this.$auth.logout()
 		}
 	}
 }

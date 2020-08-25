@@ -26,7 +26,7 @@ export default {
 .movie-container {
 	display: flex;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	flex-direction: column;
 	flex-grow: 2;
 	width: 50%;
